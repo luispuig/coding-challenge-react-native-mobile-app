@@ -5,10 +5,9 @@ import ShallowRenderer from "react-test-renderer/shallow"; // ES6
 import Error from "./Error";
 
 const props = {
-    error: 'error message',
-    feedUpdate: () => {},
+  error: "error message",
+  feedUpdate: () => {}
 };
-
 
 it("match on Shallow mode", () => {
   const renderer = new ShallowRenderer();
@@ -16,6 +15,3 @@ it("match on Shallow mode", () => {
   const tree = renderer.getRenderOutput();
   expect(tree).toMatchSnapshot();
 });
-
-
-

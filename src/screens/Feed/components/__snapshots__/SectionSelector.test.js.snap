@@ -1,0 +1,596 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`call methods 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "new",
+    ],
+    Array [
+      "top",
+    ],
+    Array [
+      "controversial",
+    ],
+    Array [
+      "hot",
+    ],
+  ],
+}
+`;
+
+exports[`match on Shallow mode controversial 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "#FFFFFF",
+      "borderBottomColor": "#CCCCCC",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      New
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      Top
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {
+          "backgroundColor": "#47b8ff",
+        },
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#FFFFFF",
+          },
+        ]
+      }
+    >
+      Popular
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      Hot
+    </Text>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`match on Shallow mode hot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "#FFFFFF",
+      "borderBottomColor": "#CCCCCC",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      New
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      Top
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      Popular
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {
+          "backgroundColor": "#47b8ff",
+        },
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#FFFFFF",
+          },
+        ]
+      }
+    >
+      Hot
+    </Text>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`match on Shallow mode new 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "#FFFFFF",
+      "borderBottomColor": "#CCCCCC",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {
+          "backgroundColor": "#47b8ff",
+        },
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#FFFFFF",
+          },
+        ]
+      }
+    >
+      New
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      Top
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      Popular
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      Hot
+    </Text>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`match on Shallow mode top 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "#FFFFFF",
+      "borderBottomColor": "#CCCCCC",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      New
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {
+          "backgroundColor": "#47b8ff",
+        },
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#FFFFFF",
+          },
+        ]
+      }
+    >
+      Top
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      Popular
+    </Text>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "padding": 10,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#47b8ff",
+            "fontSize": 12,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+    >
+      Hot
+    </Text>
+  </TouchableOpacity>
+</View>
+`;
