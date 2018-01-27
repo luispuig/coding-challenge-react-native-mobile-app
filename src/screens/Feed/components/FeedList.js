@@ -4,7 +4,14 @@ import { FlatList, RefreshControl } from "react-native";
 import FeedItem from "./FeedItem";
 import SectionSelector from "./SectionSelector";
 
-export default ({ loading, feed, feed_data, feedUpdate, selectItem, feedSectionChange }) => (
+export default ({
+  loading,
+  feed,
+  feed_data,
+  feedUpdate,
+  selectItem,
+  feedSectionChange
+}) => (
   <FlatList
     data={feed_data}
     keyExtractor={item => item.id}

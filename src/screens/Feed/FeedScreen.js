@@ -13,8 +13,9 @@ class FeedScreen extends React.PureComponent {
   }
 
   _feedUpdate = () => this.props.feedUpdate(); // Dispatch FeedUpdate Action
-  _feedItemSelected = item =>
-    this.props.navigation.navigate("Detail", { item }); // Navigate to Detail Screen
+  _feedItemSelected = ({title, url}) =>
+    this.props.navigation.navigate("Detail", { title, url }); // Navigate to Detail Screen
+  _feedSectionChange = (section) => this.props.feedSectionChange({section}) // Dispatch Section Change Section
 
   render() {
     const { feed, feed_data } = this.props;
@@ -32,6 +33,7 @@ class FeedScreen extends React.PureComponent {
         feed_data={feed_data}
         feedUpdate={this._feedUpdate}
         selectItem={this._feedItemSelected}
+        feedSectionChange={this._feedSectionChange}
       />
     );
   }
