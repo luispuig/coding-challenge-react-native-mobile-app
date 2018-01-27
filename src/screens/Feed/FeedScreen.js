@@ -4,8 +4,8 @@ import { feedUpdate, changeSection } from "../../redux/feed/actions";
 
 import { Text, View, TouchableOpacity } from "react-native";
 
-import Error from "./components/Error"
-import FeedList from "./components/FeedList"
+import Error from "./components/Error";
+import FeedList from "./components/FeedList";
 
 class FeedScreen extends React.PureComponent {
   componentDidMount() {
@@ -13,23 +13,26 @@ class FeedScreen extends React.PureComponent {
   }
 
   _feedUpdate = () => this.props.feedUpdate(); // Dispatch FeedUpdate Action
+  _feedItemSelected = item =>
+    this.props.navigation.navigate("Detail", { item }); // Navigate to Detail Screen
 
   render() {
     const { feed, feed_data } = this.props;
     const { state, section } = feed;
 
-    if( state === 'fail') {
-      const {error} = this.props.feed;
-      return  <Error error={error} feedUpdate={this._feedUpdate} />;
+    if (state === "fail") {
+      const { error } = this.props.feed;
+      return <Error error={error} feedUpdate={this._feedUpdate} />;
     }
 
     return (
-      <FeedList 
-        loading= { (state === 'request') } 
+      <FeedList
+        loading={state === "request"}
         feed={feed}
-        feed_data= {feed_data} 
-        feedUpdate={this._feedUpdate} 
-      /> 
+        feed_data={feed_data}
+        feedUpdate={this._feedUpdate}
+        selectItem={this._feedItemSelected}
+      />
     );
   }
 }
