@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match call selectItemMock 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "title": "title",
+        "url": "http://example.com",
+      },
+    ],
+  ],
+}
+`;
+
+exports[`match on Shallow mode 1`] = `
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "flexDirection": "row",
+          "marginBottom": 1,
+          "padding": 5,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 2,
+            "padding": 5,
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "thumbnail.jpg",
+            }
+          }
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 7,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 11,
+              "margin": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          <TimeAgo
+            hideAgo={false}
+            interval={60000}
+            time={undefined}
+          />
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontWeight": "bold",
+              "margin": 3,
+            }
+          }
+        >
+          title
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "margin": 3,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "flex": 4,
+                "fontSize": 10,
+                "margin": 3,
+              }
+            }
+          >
+            author
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "flex": 3,
+                "fontSize": 10,
+                "margin": 3,
+              }
+            }
+          >
+            Score: 
+            2
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "flex": 3,
+                "fontSize": 10,
+                "margin": 3,
+              }
+            }
+          >
+            3
+             comments
+          </Text>
+        </View>
+      </View>
+    </View>
+  </TouchableOpacity>
+</View>
+`;
