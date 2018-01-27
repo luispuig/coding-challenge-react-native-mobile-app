@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-
 import { feedUpdate, changeSection } from "../../redux/feed/actions";
 
 import { Text, View, TouchableOpacity } from "react-native";
 
-import reddit from "../../services/reddit";
+import Error from "./components/Error"
+
 class FeedScreen extends React.PureComponent {
   componentDidMount() {
     this._feedUpdate(); // UpdateFeed on load
@@ -17,7 +17,10 @@ class FeedScreen extends React.PureComponent {
     const { feed, feed_data } = this.props;
     const { state, section } = feed;
 
-    console.log(feed_data);
+    if( state === 'fail') {
+      const {error} = this.props.feed;
+      return  <Error error={error} feedUpdate={this._feedUpdate} />;
+    }
 
     return (
       <View>
