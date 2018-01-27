@@ -5,16 +5,15 @@ import ShallowRenderer from "react-test-renderer/shallow"; // ES6
 import DetailScreen from "./DetailScreen";
 
 const props = {
-    navigation: {
-      state: {
-        params: {
-          title: "title",
-          url: "http://example.com"
-        }
+  navigation: {
+    state: {
+      params: {
+        title: "title",
+        url: "http://example.com"
       }
     }
-  };
-
+  }
+};
 
 it("match on Shallow mode", () => {
   const renderer = new ShallowRenderer();
@@ -23,9 +22,7 @@ it("match on Shallow mode", () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('it should apply navigation title', () => {
-    const navigationOptions = DetailScreen.navigationOptions(props);
-    expect(navigationOptions).toMatchSnapshot();
-  });
-
-
+it("it should apply navigation title", () => {
+  const navigationOptions = DetailScreen.navigationOptions(props);
+  expect(navigationOptions).toMatchSnapshot();
+});
