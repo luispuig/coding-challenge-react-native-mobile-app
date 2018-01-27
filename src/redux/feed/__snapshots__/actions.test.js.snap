@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creates Action changeSection 1`] = `
+Array [
+  Array [
+    Object {
+      "payload": Object {
+        "section": "top",
+      },
+      "type": "FEED_SECTION_CHANGE",
+    },
+  ],
+  Array [
+    [Function],
+  ],
+]
+`;
+
+exports[`Creates Action feedSectionChange 1`] = `
+Object {
+  "payload": Object {
+    "section": "top",
+  },
+  "type": "FEED_SECTION_CHANGE",
+}
+`;
+
+exports[`Creates Action feedUpdate 1`] = `
+Array [
+  Array [
+    Object {
+      "payload": Object {},
+      "type": "FEED_UPDATE__REQUEST",
+    },
+  ],
+  Array [
+    Object {
+      "payload": Object {},
+      "type": "FEED_UPDATE__SUCCESS",
+    },
+  ],
+  Array [
+    Object {
+      "payload": Object {
+        "data": Array [
+          Object {
+            "author": "author",
+            "created_utc": 1517115254,
+            "date": 1517115254060,
+            "id": "1234",
+            "num_comments": 3,
+            "score": 2,
+            "thumbnail": "thumbnail.jpg",
+            "title": "title",
+            "url": "http://example.com",
+          },
+          Object {
+            "author": "author",
+            "created_utc": 1517115254,
+            "date": 1517115254060,
+            "id": "1234",
+            "num_comments": 3,
+            "score": 2,
+            "thumbnail": "thumbnail_url.jpg",
+            "title": "title",
+            "url": "http://example.com",
+          },
+        ],
+      },
+      "type": "FEED_DATA__UPDATE",
+    },
+  ],
+]
+`;
+
+exports[`Creates Action feedUpdate with error 1`] = `
+Array [
+  Array [
+    Object {
+      "payload": Object {},
+      "type": "FEED_UPDATE__REQUEST",
+    },
+  ],
+  Array [
+    Object {
+      "payload": Object {
+        "error": "Unable to fetch the feed",
+      },
+      "type": "FEED_UPDATE__FAIL",
+    },
+  ],
+]
+`;
+
+exports[`Creates Action feedUpdate_Fail 1`] = `
+Object {
+  "payload": Object {
+    "error": "error message",
+  },
+  "type": "FEED_UPDATE__FAIL",
+}
+`;
+
+exports[`Creates Action feedUpdate_Request 1`] = `
+Object {
+  "payload": Object {},
+  "type": "FEED_UPDATE__REQUEST",
+}
+`;
+
+exports[`Creates Action feedUpdate_Success 1`] = `
+Object {
+  "payload": Object {},
+  "type": "FEED_UPDATE__SUCCESS",
+}
+`;

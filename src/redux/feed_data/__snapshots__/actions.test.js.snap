@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creates Action feedData_Update 1`] = `
+Object {
+  "payload": Object {
+    "data": Array [
+      Object {
+        "id": 1,
+        "post": "post-1",
+        "url": "url-1",
+      },
+      Object {
+        "id": 1,
+        "post": "post-1",
+        "url": "url-1",
+      },
+    ],
+  },
+  "type": "FEED_DATA__UPDATE",
+}
+`;

@@ -47,7 +47,7 @@ Error.propTypes = {
   author: PropTypes.string.isRequired,
   num_comments: PropTypes.number.isRequired,
   score: PropTypes.number.isRequired,
-  date: PropTypes.instanceOf(Date).isRequired,
+  date: PropTypes.number.isRequired,
   thumbnail: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired
 };

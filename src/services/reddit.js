@@ -15,7 +15,7 @@ const api = {
       })
       .then(data => data.map(item => api._transformItemData(item))) // TRANSFORM API DATA
       .catch(e => {
-        console.log(e);
+        //console.log(e);
         throw new Error("Unable to fetch the feed"); // throw generalistic error
       });
   },
@@ -55,7 +55,7 @@ const api = {
     // Aux function to trasform dato form epoch format to Date Object
     if (epoch < 10000000000) epoch *= 1000; // convert to milliseconds (Epoch is usually expressed in seconds, but Javascript uses Milliseconds)
     epoch = epoch + new Date().getTimezoneOffset() * -1; //for timeZone
-    return new Date(epoch);
+    return new Date(epoch).getTime();
   }
 };
 
