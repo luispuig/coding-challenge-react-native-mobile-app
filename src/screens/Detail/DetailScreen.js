@@ -1,19 +1,16 @@
 import React from "react";
 
-import { Text, View } from "react-native";
+import { WebView } from "react-native";
 
-class FeedScreen extends React.PureComponent {
+class DetailScreen extends React.PureComponent {
+  // TODO. Change Navigation title with Item title
+
   render() {
     const { item } = this.props.navigation.state.params; // Get info from Navigation
+    const { url } = item.data;
 
-    const { title } = item.data;
-    return (
-      <View>
-        <Text>This is Detail Screen</Text>
-        <Text>{title}</Text>
-      </View>
-    );
+    return <WebView source={{ uri: url }} />;
   }
 }
 
-export default FeedScreen;
+export default DetailScreen;
