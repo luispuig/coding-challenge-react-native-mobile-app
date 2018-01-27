@@ -6,8 +6,8 @@ import FeedItem from "./FeedItem";
 export default ({ loading, feed, feed_data, feedUpdate, selectItem }) => (
   <FlatList
     data={feed_data}
-    keyExtractor={item => item.data.id}
-    renderItem={({ item }) => <FeedItem item={item} selectItem={selectItem} />}
+    keyExtractor={item => item.id}
+    renderItem={({ item }) => <FeedItem {...item} selectItem={selectItem} />}
     refreshing={loading}
     refreshControl={
       <RefreshControl refreshing={loading} onRefresh={feedUpdate} />

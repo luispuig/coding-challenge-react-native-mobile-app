@@ -4,31 +4,23 @@ import { Image, Text, TouchableOpacity, StyleSheet, View } from "react-native";
 import TimeAgo from "react-native-timeago";
 
 class FeedItem extends React.PureComponent {
-  _selectItem = () => this.props.selectItem(this.props.item); // Call parent selectItem with item argument
-
-  // TODO: Move time calcs to utils lib
-  _EpochToDate = epoch => {
-    if (epoch < 10000000000) epoch *= 1000; // convert to milliseconds (Epoch is usually expressed in seconds, but Javascript uses Milliseconds)
-    epoch = epoch + new Date().getTimezoneOffset() * -1; //for timeZone
-    return new Date(epoch);
+  _selectItem = () => {
+    const { selectItem, title, url } = this.props;
+    selectItem({ title, url }); // Call parent selectItem with item title and item url
+    // It can be improved using Redux to manage selected Item
   };
 
   render() {
-    const { item } = this.props;
-    const { id, title, author, num_comments, score, created_utc } = item.data;
-    const date = this._EpochToDate(created_utc); // timestamp format.
-
-    let thumbnail = item.data.thumbnail; // thumbnail
-    if (
-      !thumbnail &&
-      item.data.media &&
-      item.data.media.oembed &&
-      item.data.media.oembed.thumbnail_url
-    ) {
-      // Preventing data structure errors
-      // Check for media thumbnail
-      thumbnail = item.data.media.oembed.thumbnail_url;
-    }
+    const {
+      id,
+      title,
+      author,
+      num_comments,
+      score,
+      created_utc,
+      date,
+      thumbnail
+    } = this.props;
 
     return (
       <View>
