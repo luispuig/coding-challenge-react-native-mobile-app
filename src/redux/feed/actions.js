@@ -9,7 +9,11 @@ export const FEED_SECTION_CHANGE = "FEED_SECTION_CHANGE";
 
 export const changeSection = ({ section }) => {
   return (dispatch, getState) => {
-    // TODO changeSection Action Creator
+    // Change section
+    dispatch( feedSectionChange({section}) );
+    
+    // Dispatch updating action
+    dispatch( feedUpdate() ); 
   };
 };
 

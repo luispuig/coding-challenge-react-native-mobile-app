@@ -16,25 +16,47 @@ class SectionSelector extends React.PureComponent {
           onPress={this._changeSection_New}
           style={[styles.item, section == "new" ? styles.selected : {}]}
         >
-          <Text style={styles.text}>New</Text>
+          <Text
+            style={[styles.text, section == "new" ? styles.selected_text : {}]}
+          >
+            New
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={this._changeSection_Top}
           style={[styles.item, section == "top" ? styles.selected : {}]}
         >
-          <Text style={styles.text}>Top</Text>
+          <Text
+            style={[styles.text, section == "top" ? styles.selected_text : {}]}
+          >
+            Top
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={this._changeSection_Controversial}
-          style={[styles.item, section == "controversial" ? styles.selected : {}]}
+          style={[
+            styles.item,
+            section == "controversial" ? styles.selected : {}
+          ]}
         >
-          <Text style={styles.text}>Popular</Text>
+          <Text
+            style={[
+              styles.text,
+              section == "controversial" ? styles.selected_text : {}
+            ]}
+          >
+            Popular
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={this._changeSection_Hot}
           style={[styles.item, section == "hot" ? styles.selected : {}]}
         >
-          <Text style={styles.text}>Hot</Text>
+          <Text
+            style={[styles.text, section == "hot" ? styles.selected_text : {}]}
+          >
+            Hot
+          </Text>
         </TouchableOpacity>
       </View>
     );
@@ -44,23 +66,26 @@ class SectionSelector extends React.PureComponent {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#FFFFFF",
-    margin: 5,
-    padding: 5,
     flexDirection: "row",
     alignItems: "stretch",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    borderBottomWidth: 1,
+    borderBottomColor: '#CCCCCC',
   },
   item: {
-    borderWidth: 1,
-    padding: 4,
+    padding: 10,
     flex: 1
   },
   text: {
     fontSize: 12,
-    textAlign: "center"
+    textAlign: "center",
+    color: "#47b8ff"
   },
   selected: {
-    backgroundColor: "#CCCCCC"
+    backgroundColor: "#47b8ff"
+  },
+  selected_text: {
+    color: "#FFFFFF"
   }
 });
 

@@ -8,7 +8,7 @@ const RootNavigator = StackNavigator({
   Feed: {
     screen: FeedScreen,
     navigationOptions: {
-      headerTitle: "News Feed"
+      headerTitle: "reddit/r/programing"
     }
   },
   Detail: {
