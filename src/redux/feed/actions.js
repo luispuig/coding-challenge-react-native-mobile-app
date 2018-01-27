@@ -1,3 +1,4 @@
+import reddit from "../../services/reddit";
 import { feedData_Update } from "../feed_data/actions";
 
 export const FEED_UPDATE__REQUEST = "FEED_UPDATE__REQUEST";
@@ -14,7 +15,21 @@ export const changeSection = ({ section }) => {
 
 export const feedUpdate = () => {
   return (dispatch, getState) => {
-    // TODO feedUpdate Action Creator
+    // Set City State to Fetching Request
+    dispatch(feedUpdate_Request());
+
+    const state = getState();
+    const { section } = state.feed; // Actual section needed for Feeding Service
+    // Fetch Promise
+    return reddit.getFeed(section).then(
+      data => {
+        dispatch(feedUpdate_Success());
+        dispatch(feedData_Update({ data })); // Update feed_data store
+      },
+      error => {
+        dispatch(feedUpdate_Fail({ error: error.message }));
+      }
+    );
   };
 };
 

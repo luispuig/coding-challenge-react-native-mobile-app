@@ -8,25 +8,23 @@ import { Text, View, TouchableOpacity } from "react-native";
 import reddit from "../../services/reddit";
 class FeedScreen extends React.PureComponent {
   componentDidMount() {
-    // Testing reddit service
-    reddit
-      .getFeed("new")
-      .then(data => console.log(data), error => console.log(error));
-
-    reddit
-      .getFeed("top")
-      .then(data => console.log(data), error => console.log(error));
+    this._feedUpdate(); // UpdateFeed on load
   }
 
+  _feedUpdate = () => this.props.feedUpdate(); // Dispatch FeedUpdate Action
+
   render() {
-    const { feed } = this.props;
+    const { feed, feed_data } = this.props;
     const { state, section } = feed;
+
+    console.log(feed_data);
 
     return (
       <View>
         <Text>This is Feed Screen</Text>
         <Text>State: {state} </Text>
         <Text>Section: {section}</Text>
+        <Text>feed_data: {feed_data.toString()}</Text>
         <TouchableOpacity
           onPress={() => this.props.navigation.navigate("Detail")}
         >
