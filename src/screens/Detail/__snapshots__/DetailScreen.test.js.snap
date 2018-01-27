@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should apply navigation title 1`] = `
+Object {
+  "title": "title",
+}
+`;
+
+exports[`match on Shallow mode 1`] = `
+<WebView
+  scalesPageToFit={true}
+  source={
+    Object {
+      "uri": "http://example.com",
+    }
+  }
+/>
+`;
