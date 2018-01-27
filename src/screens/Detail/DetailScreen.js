@@ -3,7 +3,9 @@ import React from "react";
 import { WebView } from "react-native";
 
 class DetailScreen extends React.PureComponent {
-  // TODO. Change Navigation title with Item title
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.state.params.item.data.title
+  });
 
   render() {
     const { item } = this.props.navigation.state.params; // Get info from Navigation
