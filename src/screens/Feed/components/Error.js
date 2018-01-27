@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { Text, View, TouchableOpacity } from "react-native";
 
-export default ({ error, feedUpdate }) => (
+const Error = ({ error, feedUpdate }) => (
   <View>
     <Text>Ha ocurrido un error inesperado</Text>
     <Text>{error}</Text>
@@ -10,3 +12,10 @@ export default ({ error, feedUpdate }) => (
     </TouchableOpacity>
   </View>
 );
+
+Error.propTypes = {
+  error: PropTypes.string.isRequired,
+  feedUpdate: PropTypes.func.isRequired
+};
+
+export default Error;

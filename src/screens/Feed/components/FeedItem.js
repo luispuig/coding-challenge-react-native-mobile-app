@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { Image, Text, TouchableOpacity, StyleSheet, View } from "react-native";
 import TimeAgo from "react-native-timeago";
@@ -11,16 +12,7 @@ class FeedItem extends React.PureComponent {
   };
 
   render() {
-    const {
-      id,
-      title,
-      author,
-      num_comments,
-      score,
-      created_utc,
-      date,
-      thumbnail
-    } = this.props;
+    const { title, author, num_comments, score, date, thumbnail } = this.props;
 
     return (
       <View>
@@ -48,6 +40,17 @@ class FeedItem extends React.PureComponent {
     );
   }
 }
+
+Error.propTypes = {
+  selectItem: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  num_comments: PropTypes.number.isRequired,
+  score: PropTypes.number.isRequired,
+  date: PropTypes.instanceOf(Date).isRequired,
+  thumbnail: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
+};
 
 export default FeedItem;
 

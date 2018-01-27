@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { feedUpdate, changeSection } from "../../redux/feed/actions";
 
@@ -13,9 +14,9 @@ class FeedScreen extends React.PureComponent {
   }
 
   _feedUpdate = () => this.props.feedUpdate(); // Dispatch FeedUpdate Action
-  _feedItemSelected = ({title, url}) =>
+  _feedItemSelected = ({ title, url }) =>
     this.props.navigation.navigate("Detail", { title, url }); // Navigate to Detail Screen
-  _feedSectionChange = (section) => this.props.feedSectionChange({section}) // Dispatch Section Change Section
+  _feedSectionChange = section => this.props.feedSectionChange({ section }); // Dispatch Section Change Section
 
   render() {
     const { feed, feed_data } = this.props;
@@ -29,7 +30,7 @@ class FeedScreen extends React.PureComponent {
     return (
       <FeedList
         loading={state === "request"}
-        feed={feed}
+        section={section}
         feed_data={feed_data}
         feedUpdate={this._feedUpdate}
         selectItem={this._feedItemSelected}
@@ -38,6 +39,28 @@ class FeedScreen extends React.PureComponent {
     );
   }
 }
+
+FeedScreen.propTypes = {
+  feed: PropTypes.shape({
+    section: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+    error: PropTypes.string
+  }),
+  feed_data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+      num_comments: PropTypes.number.isRequired,
+      score: PropTypes.number.isRequired,
+      date: PropTypes.instanceOf(Date).isRequired,
+      thumbnail: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired
+    }).isRequired
+  ),
+  feedUpdate: PropTypes.func.isRequired,
+  feedSectionChange: PropTypes.func.isRequired
+};
 
 const mapStateToProps = ({ feed, feed_data }) => ({
   feed,

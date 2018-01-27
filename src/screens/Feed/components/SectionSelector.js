@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
 
 class SectionSelector extends React.PureComponent {
@@ -62,7 +64,12 @@ class SectionSelector extends React.PureComponent {
     );
   }
 }
+SectionSelector.propTypes = {
+  section: PropTypes.string.isRequired,
+  feedSectionChange: PropTypes.func.isRequired
+};
 
+export default SectionSelector;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#FFFFFF",
@@ -70,7 +77,7 @@ const styles = StyleSheet.create({
     alignItems: "stretch",
     justifyContent: "space-between",
     borderBottomWidth: 1,
-    borderBottomColor: '#CCCCCC',
+    borderBottomColor: "#CCCCCC"
   },
   item: {
     padding: 10,
@@ -88,5 +95,3 @@ const styles = StyleSheet.create({
     color: "#FFFFFF"
   }
 });
-
-export default SectionSelector;
