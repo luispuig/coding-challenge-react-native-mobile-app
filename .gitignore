@@ -1,3 +1,7 @@
 node_modules/**/*
 .expo/*
 npm-debug.*
+
+ # testing
+ /coverage
+ /flow-coverage

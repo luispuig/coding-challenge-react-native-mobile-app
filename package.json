@@ -12,5 +12,24 @@
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "jest-expo": "^25.0.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/jest",
+    "test-coverage": "node_modules/.bin/jest --env=jsdom --coverage",
+    "flow-coverage": "flow-coverage-report"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/App.js",
+      "!src/redux/store.js",
+      "!src/redux/reducers.js"
+    ]
   }
+
 }

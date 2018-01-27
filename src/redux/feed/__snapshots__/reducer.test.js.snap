@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer action: FEED_SECTION_CHANGE 1`] = `
+Object {
+  "error": undefined,
+  "section": "top",
+  "state": "request",
+}
+`;
+
+exports[`Reducer action: FEED_UPDATE__FAIL 1`] = `
+Object {
+  "error": undefined,
+  "section": "new",
+  "state": "request",
+}
+`;
+
+exports[`Reducer action: FEED_UPDATE__FAIL with error 1`] = `
+Object {
+  "error": "error message",
+  "section": "new",
+  "state": "fail",
+}
+`;
+
+exports[`Reducer action: FEED_UPDATE__REQUEST 1`] = `
+Object {
+  "error": undefined,
+  "section": "new",
+  "state": "request",
+}
+`;
+
+exports[`Reducer action: FEED_UPDATE__SUCCESS 1`] = `
+Object {
+  "error": undefined,
+  "section": "new",
+  "state": "success",
+}
+`;
+
+exports[`Reducer other action 1`] = `
+Object {
+  "error": undefined,
+  "section": "new",
+  "state": "request",
+}
+`;
