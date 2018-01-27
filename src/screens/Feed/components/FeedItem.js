@@ -11,12 +11,18 @@ class FeedItem extends React.PureComponent {
 
   render() {
     const { item } = this.props;
-    const { title } = item.data;
+    const {id, title, author, num_comments, score, created_utc} = item.data;
+    
     return (
       <View>
         <TouchableOpacity onPress={this._selectItem}>
           <View>
+            <Text>{id}</Text>
             <Text>{title}</Text>
+            <Text>date: {created_utc}</Text>
+            <Text>{author}</Text>
+            <Text>{num_comments} comments</Text>
+            <Text>score: {score}</Text>
             <Text>-------------------------</Text>
           </View>
         </TouchableOpacity>

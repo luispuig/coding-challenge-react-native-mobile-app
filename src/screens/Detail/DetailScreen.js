@@ -11,7 +11,7 @@ class FeedScreen extends React.PureComponent {
       <View>
         <Text>This is Detail Screen</Text>
         <Text>{title}</Text>
-      </View>params
+      </View>
     );
   }
 }
