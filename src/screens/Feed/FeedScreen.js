@@ -5,6 +5,7 @@ import { feedUpdate, changeSection } from "../../redux/feed/actions";
 import { Text, View, TouchableOpacity } from "react-native";
 
 import Error from "./components/Error"
+import FeedList from "./components/FeedList"
 
 class FeedScreen extends React.PureComponent {
   componentDidMount() {
@@ -23,17 +24,12 @@ class FeedScreen extends React.PureComponent {
     }
 
     return (
-      <View>
-        <Text>This is Feed Screen</Text>
-        <Text>State: {state} </Text>
-        <Text>Section: {section}</Text>
-        <Text>feed_data: {feed_data.toString()}</Text>
-        <TouchableOpacity
-          onPress={() => this.props.navigation.navigate("Detail")}
-        >
-          <Text>Go to detail</Text>
-        </TouchableOpacity>
-      </View>
+      <FeedList 
+        loading= { (state === 'request') } 
+        feed={feed}
+        feed_data= {feed_data} 
+        feedUpdate={this._feedUpdate} 
+      /> 
     );
   }
 }
