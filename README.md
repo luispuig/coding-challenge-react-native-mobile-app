@@ -1,4 +1,4 @@
-# BS Team Challenge. Reddit News Reader
+# BS Team Challenge. Reddit Reader Mobile App
 React Native Test made by Luis Puig
 
 Repository: https://github.com/luispuig/news-reader
