@@ -2,7 +2,6 @@ import React from "react";
 
 import ShallowRenderer from "react-test-renderer/shallow"; // ES6
 
-// setup file
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { shallow } from "enzyme";
@@ -55,5 +54,5 @@ it("call methods", () => {
   wrapper.instance()._changeSection_Controversial();
   wrapper.instance()._changeSection_Hot();
 
-  expect(feedSectionChangeMock).toMatchSnapshot();
+  expect(feedSectionChangeMock.mock.calls).toMatchSnapshot();
 });

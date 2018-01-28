@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mapDispatchToProps 1`] = `
+Array [
+  Array [
+    [Function],
+  ],
+  Array [
+    [Function],
+  ],
+]
+`;
+
+exports[`match call internalMethods 1`] = `
+Array [
+  Array [],
+  Array [],
+  Array [
+    Object {
+      "section": "top",
+    },
+  ],
+  Array [
+    "Detail",
+    Object {
+      "title": "title",
+      "url": "url",
+    },
+  ],
+]
+`;
+
+exports[`match on Shallow mode 1`] = `null`;
+
+exports[`match on Shallow with fail state 1`] = `null`;

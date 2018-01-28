@@ -1,16 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`match call selectItemMock 1`] = `
-[MockFunction] {
-  "calls": Array [
-    Array [
-      Object {
-        "title": "title",
-        "url": "http://example.com",
-      },
-    ],
+Array [
+  Array [
+    Object {
+      "title": "title",
+      "url": "http://example.com",
+    },
   ],
-}
+]
 `;
 
 exports[`match on Shallow mode 1`] = `

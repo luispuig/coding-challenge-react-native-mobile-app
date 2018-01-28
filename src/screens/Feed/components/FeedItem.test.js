@@ -35,5 +35,5 @@ it("match call selectItemMock", () => {
   const wrapper = shallow(<FeedItem {...props} selectItem={selectItemMock} />);
   wrapper.instance()._selectItem();
 
-  expect(selectItemMock).toMatchSnapshot();
+  expect(selectItemMock.mock.calls).toMatchSnapshot();
 });

@@ -8,7 +8,7 @@ import { Text, View, TouchableOpacity } from "react-native";
 import Error from "./components/Error";
 import FeedList from "./components/FeedList";
 
-class FeedScreen extends React.PureComponent {
+export class FeedScreenComponent extends React.PureComponent {
   componentDidMount() {
     this._feedUpdate(); // UpdateFeed on load
   }
@@ -40,7 +40,7 @@ class FeedScreen extends React.PureComponent {
   }
 }
 
-FeedScreen.propTypes = {
+FeedScreenComponent.propTypes = {
   feed: PropTypes.shape({
     section: PropTypes.string.isRequired,
     state: PropTypes.string.isRequired,
@@ -67,11 +67,11 @@ const mapStateToProps = ({ feed, feed_data }) => ({
   feed_data
 });
 
-const mapDispatchToProps = (dispatch, props) => ({
+export const mapDispatchToProps = (dispatch, props) => ({
   feedUpdate: () => dispatch(feedUpdate()),
   feedSectionChange: data => dispatch(changeSection(data)),
   ...props // Allow overwriting for testing porpuse
 });
 
 const connector = connect(mapStateToProps, mapDispatchToProps);
-export default connector(FeedScreen);
+export const FeedScreen = connector(FeedScreenComponent); // Separated exports for testing porpuse
