@@ -1,7 +1,5 @@
-# BS Team Challenge. Reddit Reader Mobile App
+# React Native Mobile App Challenge. Reddit Reader Mobile App
 React Native Test made by Luis Puig
-
-Repository: https://github.com/luispuig/news-reader
 
 Try the App with Expo: https://expo.io/@luispuig/news-reader
 <br/>You will need to install Expo App on your device
